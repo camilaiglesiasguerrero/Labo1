@@ -11,7 +11,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Le pido al usuario el ingreso de dos números, los sumo e informo el resultado
+int sumar(int num1, int num2);
+
+//Le pido al usuario el ingreso de dos números, los sumo en una función e informo el resultado desde el main
 int main(void) {
 	int num1;
 	int num2;
@@ -23,8 +25,16 @@ int main(void) {
 	printf("Ingrese otro numero: ");
 	fflush(stdout);
 	scanf("%d",&num2);
-	resultado = num1 + num2;
+	resultado = sumar(num1, num2);
 	printf("Numero 1: %d - Numero 2: %d \n%d + %d = %d",num1,num2,num1,num2,resultado);
 
 	return 0;
+}
+
+int sumar(int num1, int num2)
+{
+	int resultado;
+	resultado = num1 + num2;
+
+	return resultado;
 }
